@@ -1,4 +1,3 @@
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Test {
@@ -67,7 +66,7 @@ public class Test {
 
         // dg1.reverse();
 
-        Eppstein.kShortestPaths(dg1.getVertex(0), dg1.getVertex(11), dg1, 11);
+        System.out.println(Eppstein.kShortestPaths(dg1.getVertex(0), dg1.getVertex(11), dg1, 11));
 
         // System.out.println(dg1);
 
@@ -87,29 +86,29 @@ public class Test {
         // System.out.println(test.edges);
     }
 
-    private static void buildGraph() {
-        System.out.println("Hi, welcome to the graph creator");
-        DiGraph g = new DiGraph();
-        while (s.nextLine() != "exit") {
-            displayOptions();
-            int command = s.nextInt();
-            if (command == 1) {
-                System.out.println("How many lines do you wish to add?");
-                for (int i = 0; i < s.nextInt(); i++) {
-                    g.addVertex();
-                }
-            } else if (command == 2) {
-                System.out.println("What is the source vertex?");
-                Vertex v = g.getVertex(s.nextInt());
-                System.out.println();
-            }
-        }
-    }
+    // private static void buildGraph() {
+    // System.out.println("Hi, welcome to the graph creator");
+    // DiGraph g = new DiGraph();
+    // while (s.nextLine() != "exit") {
+    // displayOptions();
+    // int command = s.nextInt();
+    // if (command == 1) {
+    // System.out.println("How many lines do you wish to add?");
+    // for (int i = 0; i < s.nextInt(); i++) {
+    // g.addVertex();
+    // }
+    // } else if (command == 2) {
+    // System.out.println("What is the source vertex?");
+    // Vertex v = g.getVertex(s.nextInt());
+    // System.out.println();
+    // }
+    // }
+    // }
 
-    private static void displayOptions() {
-        System.out.println("Here are your options:");
-        System.out.println("1. Add vertices");
-        System.out.println("2. Add edges to vertex");
-        System.out.println("3. Display graph");
-    }
+    // private static void displayOptions() {
+    // System.out.println("Here are your options:");
+    // System.out.println("1. Add vertices");
+    // System.out.println("2. Add edges to vertex");
+    // System.out.println("3. Display graph");
+    // }
 }
